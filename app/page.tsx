@@ -114,68 +114,6 @@ export default function OnboardingPage() {
           </div>
         </div>
 
-        {/* Recently Published Hero Card */}
-        <div className="px-space-md mt-5">
-          <Link
-            href="/browse"
-            className="block bg-inverse-surface text-inverse-on-surface p-4 rounded-xl shadow-lg relative overflow-hidden group hover:ring-2 hover:ring-primary/40 transition-all"
-          >
-            <div className="flex items-center justify-between mb-2.5">
-              <div className="flex items-center space-x-2">
-                <span className="w-2 h-2 rounded-full bg-tertiary-fixed animate-ping" />
-                <span className="font-label-sm text-label-sm text-inverse-primary uppercase tracking-wider font-semibold">
-                  Recently Published
-                </span>
-              </div>
-              <span className="font-label-sm text-label-sm text-outline-variant">12m ago</span>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="relative shrink-0">
-                <img
-                  className="w-10 h-10 rounded-full object-cover shadow-inner"
-                  alt="Aakash Sengupta"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuASA1mHyw3kCn0LM8TRDjehbmUPn7H4ZfVPulrydhiLzYZqPudGvdrtZob6-qp-lhFZ3mQ3YzLfum93tmiaQO5wqM4ehAwfpokEsUahx0V2wOnTIxSk_danACx-QJuZSuzdEB2IVRKYPiC6GnhrTQTgCMRPkZ225q0pLL9BFTVJwEUx4Tmg3NIa5Q8dX32O0EZgX6SZcyF2_Q4-vdnEc5kpR5Nvo3HS4dFylqVawYS84Ie8OBv42jeMKg"
-                />
-                <div className="absolute -bottom-1 -right-1 bg-tertiary-container text-on-tertiary p-0.5 rounded-full flex items-center justify-center">
-                  <span className="material-symbols-outlined text-[11px]">check</span>
-                </div>
-              </div>
-              <div className="min-w-0 flex-1">
-                <div className="flex items-center space-x-1.5 flex-wrap">
-                  <span className="font-label-md text-label-md font-bold text-white truncate">
-                    Aakash Sengupta
-                  </span>
-                  <span className="px-1.5 py-0.5 rounded bg-surface-container-highest/20 font-label-sm text-label-sm text-tertiary-fixed">
-                    Ex-IIT Delhi
-                  </span>
-                </div>
-                <p className="font-body-sm text-body-sm text-secondary-fixed mt-0.5 truncate">
-                  Senior PM @ Flipkart Group
-                </p>
-                <div className="mt-2.5 bg-surface-container-highest/10 px-2.5 py-1.5 rounded-lg flex items-center space-x-2">
-                  <span className="material-symbols-outlined text-primary-fixed-dim text-[16px]">
-                    menu_book
-                  </span>
-                  <span className="font-label-sm text-label-sm text-white font-medium truncate">
-                    Added: Blinkit APM Track &amp; Case Rounds Playbook
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="mt-3 pt-2.5 flex items-center justify-between text-secondary-fixed border-t border-surface-container-highest/10">
-              <div className="flex items-center space-x-1">
-                <span className="material-symbols-outlined text-[14px] text-tertiary-fixed">
-                  thumb_up
-                </span>
-                <span className="font-label-sm text-label-sm">489 peers validated this week</span>
-              </div>
-              <span className="font-label-sm text-label-sm text-inverse-primary font-semibold flex items-center group-hover:translate-x-0.5 transition-transform">
-                Preview <span className="material-symbols-outlined text-[14px] ml-0.5">arrow_forward</span>
-              </span>
-            </div>
-          </Link>
-        </div>
-
         {/* Social Proof Cohort */}
         <div className="px-space-md mt-6">
           <div className="bg-surface-container-low p-3.5 rounded-xl flex items-center justify-between border border-outline-variant/10">
