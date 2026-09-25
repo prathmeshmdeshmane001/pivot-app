@@ -46,7 +46,7 @@ export default function BrowsePage() {
     <>
       <Header variant="standard" />
 
-      <main className="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface">
+      <main className="flex-1 flex flex-col relative w-full pt-2 pb-24 bg-surface">
         <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto w-full px-margin pb-6 flex flex-col gap-space-md">
           {/* Search Surface & Applied Query Capsule */}
           <section className="flex flex-col gap-space-xs mt-2">

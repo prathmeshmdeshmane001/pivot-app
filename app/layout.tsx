@@ -4,6 +4,7 @@ import './globals.css';
 import { RoadmapProvider } from '@/lib/context/RoadmapContext';
 import BottomNav from '@/components/common/BottomNav';
 import Toast from '@/components/common/Toast';
+import IPhone17Frame from '@/components/common/IPhone17Frame';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -13,7 +14,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Pivot — Career Roadmap Builder for Indian College Students',
+  title: 'Pivot — Career Roadmap Builder (iPhone 17 Pro)',
   description:
     'Discover, build & validate your career roadmap with proven milestone playbooks engineered by verified seniors from tier-1 firms & campuses.',
   icons: {
@@ -27,7 +28,7 @@ export const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
   viewportFit: 'cover',
-  themeColor: '#f7f9fb',
+  themeColor: '#0a0d14',
 };
 
 export default function RootLayout({
@@ -45,13 +46,13 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-surface text-on-surface font-sans min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-white">
+      <body className="bg-[#0a0d14] text-on-surface font-sans min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-white">
         <RoadmapProvider>
-          <div className="flex-1 flex flex-col w-full">
+          <IPhone17Frame>
             {children}
-          </div>
-          <BottomNav />
-          <Toast />
+            <BottomNav />
+            <Toast />
+          </IPhone17Frame>
         </RoadmapProvider>
       </body>
     </html>

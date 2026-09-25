@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import PivotLogo from './PivotLogo';
 import { useRoadmap } from '@/lib/context/RoadmapContext';
@@ -22,11 +21,11 @@ export default function Header({
   const { profile } = useRoadmap();
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe">
-      <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto h-16 px-margin flex items-center justify-between">
+    <header className="sticky top-0 inset-x-0 z-40 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-black/[0.04]">
+      <div className="w-full h-14 sm:h-16 px-margin flex items-center justify-between">
         {variant === 'standard' ? (
           <Link href="/browse" className="flex items-center gap-space-sm group">
-            <PivotLogo size={32} className="h-8 w-8 object-contain transition-transform group-hover:scale-105" />
+            <PivotLogo size={30} className="h-7 w-7 sm:h-8 sm:w-8 object-contain transition-transform group-hover:scale-105" />
             <div className="flex items-center gap-1.5">
               <span className="font-headline-md text-headline-md tracking-tight text-on-surface">
                 Pivot
@@ -41,12 +40,12 @@ export default function Header({
             <button
               aria-label="Go back"
               onClick={() => router.back()}
-              className="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors active:scale-90"
+              className="min-w-[40px] min-h-[40px] flex items-center justify-center text-on-surface hover:text-primary transition-colors active:scale-90"
             >
-              <span className="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+              <span className="material-symbols-outlined text-[22px]">arrow_back_ios_new</span>
             </button>
             <div className="flex items-center gap-space-sm pl-1">
-              <PivotLogo size={24} className="h-6 w-6 object-contain" />
+              <PivotLogo size={22} className="h-5 w-5 sm:h-6 sm:w-6 object-contain" />
               <h1 className="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[200px]">
                 {title}
               </h1>

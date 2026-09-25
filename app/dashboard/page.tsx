@@ -56,7 +56,7 @@ export default function DashboardPage() {
     <>
       <Header variant="standard" />
 
-      <main className="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-surface">
+      <main className="flex-1 flex flex-col relative w-full pt-2 pb-28 bg-surface">
         <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto w-full px-margin pb-space-xl flex flex-col gap-space-lg">
           {/* Header Context Greeting */}
           <div className="flex flex-col gap-1 pt-space-sm">

@@ -41,7 +41,7 @@ export default function BuilderPage() {
     <>
       <Header variant="back" title="Build Milestone" />
 
-      <main className="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface">
+      <main className="flex-1 flex flex-col relative w-full pt-2 pb-24 bg-surface">
         <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto w-full flex flex-col">
           {/* Top Command & Action Bar */}
           <div className="px-gutter pt-space-md pb-space-sm flex items-center justify-between">
