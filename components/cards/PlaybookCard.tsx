@@ -46,7 +46,7 @@ export default function PlaybookCard({ playbook }: PlaybookCardProps) {
                 </span>
               </div>
             </div>
-            <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-lowest/10 text-white font-label-sm text-label-sm">
+            <div className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-white font-label-sm text-label-sm font-semibold border border-white/20 backdrop-blur-md shadow-xs">
               <span
                 className="material-symbols-outlined text-[13px] text-tertiary-fixed"
                 style={{ fontVariationSettings: "'FILL' 1" }}
@@ -54,6 +54,8 @@ export default function PlaybookCard({ playbook }: PlaybookCardProps) {
                 star
               </span>
               <span>{playbook.rating.toFixed(1)}</span>
+              <span className="text-white/40 font-normal">•</span>
+              <span className="text-secondary-fixed">{playbook.milestonesCount} Milestones</span>
             </div>
           </div>
 
@@ -62,12 +64,12 @@ export default function PlaybookCard({ playbook }: PlaybookCardProps) {
             {playbook.badges.map((badge, idx) => (
               <span
                 key={idx}
-                className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm ${
+                className={`shrink-0 whitespace-nowrap inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm border shadow-xs ${
                   idx === 0
-                    ? 'bg-tertiary-container/30 text-tertiary-fixed'
+                    ? 'bg-tertiary-container/30 text-tertiary-fixed border-tertiary-container/40'
                     : idx === 1
-                    ? 'bg-surface-container-lowest/10 text-surface-container'
-                    : 'bg-surface-container-lowest/10 text-secondary-fixed'
+                    ? 'bg-surface-container-lowest/10 text-surface-container border-white/10'
+                    : 'bg-surface-container-lowest/10 text-secondary-fixed border-white/10'
                 }`}
               >
                 {idx === 0 && <span className="material-symbols-outlined text-[12px]">verified</span>}
@@ -172,8 +174,16 @@ export default function PlaybookCard({ playbook }: PlaybookCardProps) {
               </span>
             </div>
           </div>
-          <div className="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
-            {playbook.milestonesCount} Milestones
+          <div className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed/70 text-on-secondary-fixed font-label-sm text-label-sm font-semibold border border-outline-variant/30 shadow-xs">
+            <span
+              className="material-symbols-outlined text-[13px] text-primary"
+              style={{ fontVariationSettings: "'FILL' 1" }}
+            >
+              star
+            </span>
+            <span>{playbook.rating.toFixed(1)}</span>
+            <span className="text-secondary/40 font-normal">•</span>
+            <span>{playbook.milestonesCount} Milestones</span>
           </div>
         </div>
 
@@ -182,10 +192,10 @@ export default function PlaybookCard({ playbook }: PlaybookCardProps) {
           {playbook.badges.map((badge, idx) => (
             <span
               key={idx}
-              className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm ${
+              className={`shrink-0 whitespace-nowrap inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm border shadow-xs ${
                 idx === 0
-                  ? 'bg-secondary-container text-on-secondary-container'
-                  : 'bg-primary-fixed text-on-primary-fixed'
+                  ? 'bg-secondary-container text-on-secondary-container border-secondary-container'
+                  : 'bg-primary-fixed/80 text-on-primary-fixed border-primary-fixed'
               }`}
             >
               <span className="material-symbols-outlined text-[12px]">
@@ -204,7 +214,7 @@ export default function PlaybookCard({ playbook }: PlaybookCardProps) {
         </div>
 
         {/* Stats Bar with Match Indicator */}
-        <div className="flex flex-wrap items-center justify-between gap-2 mt-3.5 pt-3 bg-surface-container-low rounded-lg p-2">
+        <div className="flex flex-wrap items-center justify-between gap-2 mt-3.5 pt-3 bg-surface-container-low rounded-lg p-2 border border-outline-variant/10">
           <div className="flex items-center gap-3 font-body-sm text-body-sm text-secondary">
             <span className="flex items-center gap-1">
               <span className="material-symbols-outlined text-[15px] text-primary">route</span>
@@ -217,27 +227,27 @@ export default function PlaybookCard({ playbook }: PlaybookCardProps) {
               {playbook.resourcesCount} Templates
             </span>
           </div>
-          <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm shadow-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim" />
+          <div className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm shadow-sm font-semibold">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim animate-pulse" />
             <span>{playbook.matchPercentage}% Match</span>
           </div>
         </div>
 
         {/* Action Buttons */}
-        <div className="grid grid-cols-2 gap-2 mt-4">
+        <div className="grid grid-cols-2 gap-2.5 mt-4">
           <button
             onClick={() => setShowProfileModal(true)}
-            className="flex items-center justify-center gap-1.5 h-10 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md active:scale-95 transition-all"
+            className="flex items-center justify-center gap-1.5 h-10 px-3.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold active:scale-95 transition-all border border-outline-variant/20 shadow-xs"
           >
             <span className="material-symbols-outlined text-[16px]">person</span>
             <span>View Profile</span>
           </button>
           <button
             onClick={() => toggleSavePlaybook(playbook.id)}
-            className={`save-story-btn flex items-center justify-center gap-1.5 h-10 px-3 rounded-lg font-label-md text-label-md shadow-sm active:scale-95 transition-all text-white ${
+            className={`save-story-btn flex items-center justify-center gap-1.5 h-10 px-3.5 rounded-xl font-label-md text-label-md font-bold shadow-md active:scale-95 transition-all text-white ${
               isSaved
-                ? 'bg-tertiary-container hover:bg-tertiary'
-                : 'bg-primary-container hover:bg-primary'
+                ? 'bg-tertiary-container hover:bg-tertiary shadow-tertiary/20'
+                : 'bg-primary-container hover:bg-primary shadow-primary/20'
             }`}
           >
             <span

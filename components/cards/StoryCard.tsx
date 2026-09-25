@@ -20,26 +20,26 @@ export default function StoryCard({ track, onAddMilestoneClick }: StoryCardProps
       {/* Top Header */}
       <div className="flex items-start justify-between">
         <div className="flex flex-col">
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 flex-wrap">
             <span
-              className={`px-2 py-0.5 rounded-full font-label-sm text-label-sm ${
+              className={`shrink-0 whitespace-nowrap px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold border shadow-xs ${
                 isPrimary
-                  ? 'bg-primary-fixed text-on-primary-fixed font-semibold'
-                  : 'bg-surface-container-high text-secondary'
+                  ? 'bg-primary-fixed text-on-primary-fixed border-primary-fixed'
+                  : 'bg-surface-container-high text-secondary border-outline-variant/20'
               }`}
             >
               {isPrimary ? 'Primary Track' : 'Secondary Track'}
             </span>
-            <span className="font-label-sm text-label-sm text-secondary">{track.cohort}</span>
+            <span className="shrink-0 whitespace-nowrap font-label-sm text-label-sm text-secondary">{track.cohort}</span>
           </div>
           <h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">
             {track.title}
           </h3>
         </div>
         <div
-          className={`px-2.5 py-1 rounded-full font-label-md text-label-md font-bold shrink-0 ${
+          className={`shrink-0 whitespace-nowrap px-3 py-1 rounded-full font-label-md text-label-md font-bold shadow-xs ${
             isPrimary
-              ? 'bg-primary-container text-white'
+              ? 'bg-primary-container text-white shadow-primary/20'
               : 'bg-surface-container-high text-on-surface'
           }`}
         >
