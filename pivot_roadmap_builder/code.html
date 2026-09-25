@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed": "#002113", "inverse-primary": "#b9c3ff", "surface-container-lowest": "#ffffff", "surface-tint": "#0d46f8", "primary-fixed-dim": "#b9c3ff", "surface": "#f7f9fb", "secondary-fixed": "#dfe2f1", "surface-container-low": "#f2f4f6", "secondary": "#5a5e6a", "inverse-surface": "#2d3133", "on-surface": "#191c1e", "surface-container": "#eceef0", "secondary-fixed-dim": "#c3c6d4", "on-secondary-fixed": "#171b26", "tertiary-container": "#00744f", "error": "#ba1a1a", "surface-container-highest": "#e0e3e5", "surface-dim": "#d8dadc", "on-error": "#ffffff", "on-background": "#191c1e", "background": "#f7f9fb", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#434652", "on-surface-variant": "#434656", "outline-variant": "#c4c5d9", "primary": "#0038d3", "on-primary-fixed": "#001258", "surface-bright": "#f7f9fb", "tertiary-fixed-dim": "#4edea3", "tertiary-fixed": "#6ffbbe", "on-primary-fixed-variant": "#0032c3", "on-primary-container": "#dfe2ff", "error-container": "#ffdad6", "outline": "#747688", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "inverse-on-surface": "#eff1f3", "tertiary": "#00593c", "surface-variant": "#e0e3e5", "on-tertiary-container": "#70fcbf", "on-tertiary-fixed-variant": "#005236", "secondary-container": "#dfe2f1", "on-secondary-container": "#606471", "on-error-container": "#93000a", "primary-fixed": "#dee1ff", "primary-container": "#1f4fff", "surface-container-high": "#e6e8ea" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "gutter": "1rem", "margin": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "space-2xl": "3rem", "gutter-lg": "2rem", "space-lg": "1.5rem", "gutter-md": "1.5rem", "margin-md": "2rem", "space-xs": "0.25rem", "margin-lg": "3rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-white"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><div class="flex items-center gap-space-sm pl-1"><img alt="Pivot App Icon" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wl3lgIo4qK_Fa76AZCzmRzR1p9rA7Or-UTh-KGb749fpnZDzANb3HjLScbI2GDRLUWZutU_lScSi3rO9SqubwFSA4jtN0E49b93qzcmd91qXt3MzY_dvgo-cBaHq_qhpS1QQklrQ2hhUw8kRPG4xhmPDhBzwY-V9hyBVbJ_6zcfTCRwnmXao8KZcPzFL5ey777zQboDYSHfiLF7uYEgc8zbZFeVz8S7ACgORvXVE2wBZdf0ZiSga2mZVxq"/><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[200px]">Build Milestone</h1></div></div><div class="flex items-center pr-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYLwSKWpqVC0Bm8WcGO-nswIx7TiP_ebni0n3BdKcpDTp8xu0XFdB3xjLuKCj1HcZOOTLoRM8w0FnRZ7mS03mNQ_xclsujUpI8N8LVRSyYsFrfNbA4dDsoBkY3Bj2A3ng-Ayg1Fsz8ektVs-26JNMPDzsrq86y8BYl3xjnIzuZtEqiXvzAS6RcIshgPZrjZqwSd9IzWeLpOao8onNFDCDrngpxH6H_m4yzcFbQlzOgeTfub8dLXnQIFw"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-24">
+<!-- Top Command & Action Bar -->
+<div class="px-gutter pt-space-md pb-space-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-primary uppercase tracking-wider">Interactive Builder</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Start from scratch</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<button aria-label="Share Roadmap" class="w-10 h-10 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center transition-transform active:scale-95 shadow-sm" onclick="showToast('Roadmap link copied to clipboard')">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<button class="h-10 px-space-md rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center gap-space-xs shadow-md shadow-primary/20 transition-transform active:scale-95" onclick="triggerSave(this)">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Save Roadmap</span>
+</button>
+</div>
+</div>
+<!-- Narrative Subtitle & Verification Ribbon -->
+<div class="px-gutter mb-space-md">
+<p class="font-body-md text-body-md text-secondary">
+      Assemble your sequential career milestones into a verified battle-tested roadmap.
+    </p>
+<!-- Micro Match & Confidence Indicator -->
+<div class="mt-space-sm p-space-sm rounded-xl bg-surface-container-lowest flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface">Target Track: Associate Product Manager</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container">
+        Step 3 of 4 Unlocked
+      </span>
+</div>
+</div>
+<!-- Visual Canvas / Timeline Grid -->
+<div class="px-gutter relative">
+<div class="relative pl-6">
+<!-- Continuous Background Timeline Rail -->
+<div class="absolute left-[27px] top-6 bottom-10 w-0.5 bg-surface-container-highest"></div>
+<!-- Completed Dynamic Progress Fill Rail -->
+<div class="absolute left-[27px] top-6 h-[260px] w-0.5 bg-primary"></div>
+<!-- Node 1: Completed POR -->
+<div class="relative mb-space-lg flex items-start gap-space-md group">
+<!-- Milestone Node Badge -->
+<div class="relative z-10 w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<!-- Node Content Card -->
+<div class="w-full bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between flex-wrap gap-1">
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-semibold">
+              POR
+            </span>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm font-semibold">Completed ✓</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Milestone 1: Lead Product Club (POR)</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+            Organized 400-student hackathon, owned PRD specs and user discovery tracks.
+          </p>
+<div class="mt-space-xs flex items-center gap-space-sm pt-space-xs text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">calendar_today</span> 3 Months</span>
+<span>•</span>
+<span class="flex items-center gap-0.5 text-primary"><span class="material-symbols-outlined text-[14px]">attach_file</span> 2 Artifacts Linked</span>
+</div>
+</div>
+</div>
+<!-- Node 2: In Progress Internship -->
+<div class="relative mb-space-lg flex items-start gap-space-md">
+<!-- Pulsing Active Node Icon -->
+<div class="relative z-10 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md shadow-primary/30">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest animate-ping absolute"></span>
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+<!-- Node Card -->
+<div class="w-full bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between flex-wrap gap-1">
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-md bg-tertiary-fixed text-on-tertiary-fixed font-semibold">
+              Internship
+            </span>
+<div class="flex items-center gap-1 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm font-semibold">In Progress (Month 2/3)</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Milestone 2: FinTech Startup Internship</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+            Shipped user onboarding funnel, 18% lift in conversion across Tier-2 merchants.
+          </p>
+<!-- Live Telemetry / Mentor Endorsement micro badge -->
+<div class="mt-space-xs p-space-xs rounded-lg bg-surface-container-low flex items-center gap-space-xs">
+<img class="w-5 h-5 rounded-full object-cover" data-alt="Close up profile photo of senior product manager wearing a sharp navy blazer, warm studio lighting with high conviction gaze" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1XazboiOQigew-uJ1pLK9HnLPU_Vat9uEjhnotEsnb-Vybuqwiw1tVHc-hcHoa9AvwnSM4IYjpYdSb31OyTxsTjv3pmMpAeMCbqMrNdBPXB777ym2xp-WChoIDxWVTEXM5t-PtMOWVxVPAUNryBUUFoSvdfUh0pVxaiPcanDhKyn_bRf5wYUwc0lcMJYdwqQClB-nlv3AF120ha4toHQxwBeoT6biqGvj4EFaIaUx5xrp_KXtQMmdDg"/>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Verified by Raghav Sethi (Staff PM, CRED)</span>
+</div>
+</div>
+</div>
+<!-- Central Add Step Button -->
+<div class="relative mb-space-lg flex items-center gap-space-md">
+<!-- Interactive + Trigger -->
+<button aria-label="Add Milestone" class="relative z-10 w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg shadow-primary/40 hover:scale-105 active:scale-95 transition-all" id="addStepBtn">
+<span class="material-symbols-outlined text-[24px]">add</span>
+</button>
+<!-- Prompt Card / Insertion Zone -->
+<button class="w-full p-space-md rounded-xl bg-primary-fixed/30 hover:bg-primary-fixed/50 text-left transition-colors flex items-center justify-between shadow-sm group" onclick="expandModal()">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary font-bold flex items-center gap-1">
+              Add Next Milestone
+              <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</span>
+<span class="font-body-sm text-body-sm text-secondary line-clamp-1">
+              Course, POR, Internship, Case Competition, APM Interview Prep
+            </span>
+</div>
+<span class="w-7 h-7 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+</span>
+</button>
+</div>
+<!-- Node 3: Ghosted Goal Node -->
+<div class="relative flex items-start gap-space-md opacity-60">
+<!-- Unreached Circular Ghost Indicator -->
+<div class="relative z-10 w-8 h-8 rounded-full bg-surface-container text-secondary flex items-center justify-center shadow-inner">
+<span class="font-label-sm text-label-sm">04</span>
+</div>
+<!-- Ghost Card -->
+<div class="w-full bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-md bg-surface-container-high text-secondary">
+              Placement Drive
+            </span>
+<span class="font-label-sm text-label-sm text-secondary">Target: Aug 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Milestone 4: APM Campus &amp; Off-Campus Rounds</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+            Behavioral, system design fundamentals, and guest case interviews with alumni mentors.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Lower Section: Pre-made Senior Templates -->
+<div class="mt-space-xl px-gutter">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Create from Saved Roadmaps</h3>
+<p class="font-body-sm text-body-sm text-secondary">Battle-tested playbooks authenticated by verified seniors.</p>
+</div>
+<button class="font-label-sm text-label-sm text-primary flex items-center gap-0.5 font-bold">
+        View All <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Horizontal Scroll Carousel for Senior Templates -->
+<div class="flex gap-space-md overflow-x-auto pb-space-sm pt-space-xs -mx-gutter px-gutter no-scrollbar snap-x">
+<!-- Template Card A -->
+<div class="min-w-[270px] max-w-[270px] snap-center bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold">
+              Top Rated
+            </span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Blinkit APM Playbook</h4>
+<p class="font-body-sm text-body-sm text-secondary">
+            6 milestones · 12 resources
+          </p>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="Professional headshot of Priya Nair in creative office setting, casual blazer, crisp natural lighting, authentic smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8ZOj2yWdnXlRUiawWnCOckncOWIVlroYOmYD2r4LBQHPlM9HowYFd1CxAI3AnrsaucnFqThnI5_xcEhIVLNojcctixg5UiXTFiz0lZ7C_6O2_IE2HSAwtXXxixzWR8Hf3q3fVflfqvOXLFMd8QbEV6eTG1b6DD1B0yuUtmj4inT2DspOcL62RMoowQoXx_8U3BeETabIcquX29QVxVAxxgIvgXeOrXNLVnka1YpTeWeXUpf9yP1MtMg"/>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">By Priya Nair (Blinkit PM)</span>
+</div>
+</div>
+<button class="mt-space-md w-full py-2.5 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1 active:scale-95" onclick="adoptTemplate('Blinkit APM')">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+          Edit &amp; Adopt
+        </button>
+</div>
+<!-- Template Card B -->
+<div class="min-w-[270px] max-w-[270px] snap-center bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">
+              Tier-1 Tech
+            </span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span> 5.0
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Google APM Guide</h4>
+<p class="font-body-sm text-body-sm text-secondary">
+            8 milestones · 18 resources
+          </p>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-[10px] font-bold">G</div>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Ex-Google APM Interns</span>
+</div>
+</div>
+<button class="mt-space-md w-full py-2.5 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1 active:scale-95" onclick="adoptTemplate('Google APM')">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+          Edit &amp; Adopt
+        </button>
+</div>
+<!-- Template Card C -->
+<div class="min-w-[270px] max-w-[270px] snap-center bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">
+              Emerging Tech
+            </span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span> 4.8
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Agentic AI &amp; Product</h4>
+<p class="font-body-sm text-body-sm text-secondary">
+            5 milestones · 9 repos
+          </p>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="Portrait of an Indian software engineer and AI researcher with tech workstation background, ambient blue glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUmiuf9ndpuGLiR7WvTEt3jkmOwzLsOwPvgdZxgk3e-mA1Aq_Dfb_k8Gvpd7GtXNdw8EviXp7goWUb_mms-AJW_BsGcZTo-35SEQaozdpHjIzc2ljEAzjCMkQ1oVGORRf7X796NrpRqNeA_9CpyyZePf6SnwYil_mD77IFocX7HejdXKLXceQNI1A3731PvIbtOmB2OFNbSVxKeCguazohcIfUtVpg_FE8L7xGnG_pfyt6cjqKMtGV2Q"/>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">By Devang S. (Founding PM)</span>
+</div>
+</div>
+<button class="mt-space-md w-full py-2.5 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1 active:scale-95" onclick="adoptTemplate('Agentic AI')">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+          Edit &amp; Adopt
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Modal Drawer for Adding Milestone -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex-col justify-end" id="milestoneModal">
+<div class="bg-surface-container-lowest rounded-t-2xl p-space-md w-full max-h-[85vh] overflow-y-auto shadow-2xl flex flex-col gap-space-md animate-slide-up">
+<div class="w-12 h-1.5 rounded-full bg-surface-container-highest mx-auto"></div>
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Add Career Milestone</h3>
+<p class="font-body-sm text-body-sm text-secondary">Structure your next competitive capability.</p>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary" onclick="closeModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Milestone Type Chips -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">Milestone Category</label>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="category-chip p-space-sm rounded-lg bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm text-left font-semibold flex items-center justify-between" type="button">
+<span>Coursework / Cert</span>
+<span class="material-symbols-outlined text-[16px]">school</span>
+</button>
+<button class="category-chip p-space-sm rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm text-left font-medium flex items-center justify-between" type="button">
+<span>POR &amp; Club Leadership</span>
+<span class="material-symbols-outlined text-[16px]">groups</span>
+</button>
+<button class="category-chip p-space-sm rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm text-left font-medium flex items-center justify-between" type="button">
+<span>Internship Track</span>
+<span class="material-symbols-outlined text-[16px]">business_center</span>
+</button>
+<button class="category-chip p-space-sm rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm text-left font-medium flex items-center justify-between" type="button">
+<span>Case Competition</span>
+<span class="material-symbols-outlined text-[16px]">emoji_events</span>
+</button>
+</div>
+</div>
+<!-- Milestone Title -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Milestone Title</label>
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest outline-none shadow-xs" placeholder="e.g. Cleared Reforge Product Strategy Cohort" type="text"/>
+</div>
+<!-- Deliverables & Proof -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Proof / Key Achievement Spec</label>
+<textarea class="w-full p-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest outline-none resize-none shadow-xs" placeholder="Shipped 1 PRD, 2 customer journey maps, verified by PM mentor..." rows="2"></textarea>
+</div>
+<button class="w-full h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-md shadow-primary/25 active:scale-98" onclick="commitMilestone()">
+<span class="material-symbols-outlined text-[20px]">add_task</span>
+<span>Insert Milestone into Timeline</span>
+</button>
+</div>
+</div>
+<!-- Toast Notification Feedback -->
+<div class="fixed bottom-20 inset-x-6 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-xl shadow-lg flex items-center justify-between opacity-0 pointer-events-none transition-opacity duration-300" id="toastNotification">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMsg">Changes updated</span>
+</div>
+</div>
+<!-- Persistent Thumb-Reach Mobile Navigation Dock -->
+<div class="fixed bottom-0 inset-x-0 z-40 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.05)] pb-safe">
+<div class="h-16 px-space-md flex items-center justify-around relative">
+<!-- Nav 1: Roadmaps List -->
+<button class="flex flex-col items-center justify-center w-12 text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">route</span>
+<span class="font-label-sm text-label-sm mt-0.5">Explore</span>
+</button>
+<!-- Nav 2: Network / Mentors -->
+<button class="flex flex-col items-center justify-center w-12 text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">diversity_3</span>
+<span class="font-label-sm text-label-sm mt-0.5">Seniors</span>
+</button>
+<!-- Nav 3: Active Center Button (Add/Builder) with Electric Blue Accent -->
+<div class="relative -top-4 flex flex-col items-center">
+<button class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg shadow-primary/40 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+<span class="font-label-sm text-label-sm text-primary font-bold mt-1">Builder</span>
+</div>
+<!-- Nav 4: Playbooks -->
+<button class="flex flex-col items-center justify-center w-12 text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">bookmark_manager</span>
+<span class="font-label-sm text-label-sm mt-0.5">Saved</span>
+</button>
+<!-- Nav 5: Profile / Portfolio -->
+<button class="flex flex-col items-center justify-center w-12 text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">account_circle</span>
+<span class="font-label-sm text-label-sm mt-0.5">Profile</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  function expandModal() {
+    const modal = document.getElementById('milestoneModal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('milestoneModal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function commitMilestone() {
+    closeModal();
+    showToast('New milestone inserted to execution path!');
+  }
+
+  function adoptTemplate(name) {
+    showToast(`Adopted "${name}" template into your workspace!`);
+  }
+
+  function triggerSave(btn) {
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Saving...</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check</span><span>Saved</span>`;
+      showToast('Roadmap blueprint safely preserved!');
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+      }, 2000);
+    }, 700);
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toastNotification');
+    const msg = document.getElementById('toastMsg');
+    if (toast && msg) {
+      msg.textContent = message;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 2400);
+    }
+  }
+
+  // Interactive chip category selector
+  document.querySelectorAll('.category-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.category-chip').forEach(c => {
+        c.classList.remove('bg-primary-fixed', 'text-on-primary-fixed', 'font-semibold');
+        c.classList.add('bg-surface-container', 'text-on-surface', 'font-medium');
+      });
+      this.classList.remove('bg-surface-container', 'text-on-surface', 'font-medium');
+      this.classList.add('bg-primary-fixed', 'text-on-primary-fixed', 'font-semibold');
+    });
+  });
+
+  // Tap button opens modal directly
+  const addBtn = document.getElementById('addStepBtn');
+  if (addBtn) {
+    addBtn.addEventListener('click', expandModal);
+  }
+</script></main></body></html>
