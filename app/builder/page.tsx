@@ -8,7 +8,14 @@ import { useRoadmap } from '@/lib/context/RoadmapContext';
 import { initialTemplates } from '@/data/mockData';
 
 export default function BuilderPage() {
-  const { activeTrack, updateMilestoneStatus, adoptTemplate, showToast } = useRoadmap();
+  const {
+    careerTracks,
+    activeTrack,
+    setActiveTrackId,
+    updateMilestoneStatus,
+    adoptTemplate,
+    showToast,
+  } = useRoadmap();
   const [modalOpen, setModalOpen] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
 
@@ -44,7 +51,7 @@ export default function BuilderPage() {
       <main className="flex-1 flex flex-col relative w-full pt-2 pb-24 bg-surface">
         <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto w-full flex flex-col">
           {/* Top Command & Action Bar */}
-          <div className="px-gutter pt-space-md pb-space-sm flex items-center justify-between">
+          <div className="px-gutter pt-space-md pb-space-xs flex items-center justify-between">
             <div className="flex flex-col">
               <span className="font-label-sm text-primary uppercase tracking-wider font-semibold">
                 Interactive Builder
@@ -81,6 +88,26 @@ export default function BuilderPage() {
                 )}
               </button>
             </div>
+          </div>
+
+          {/* Track Switcher Pills */}
+          <div className="px-gutter py-2 flex items-center gap-2 overflow-x-auto no-scrollbar">
+            {careerTracks.map((track) => {
+              const isActive = track.id === activeTrack.id;
+              return (
+                <button
+                  key={track.id}
+                  onClick={() => setActiveTrackId(track.id)}
+                  className={`whitespace-nowrap px-3 py-1 rounded-full text-xs font-semibold transition-all active:scale-95 ${
+                    isActive
+                      ? 'bg-primary-container text-white shadow-sm'
+                      : 'bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high'
+                  }`}
+                >
+                  {track.targetRole}
+                </button>
+              );
+            })}
           </div>
 
           {/* Narrative Subtitle & Verification Ribbon */}
@@ -151,7 +178,7 @@ export default function BuilderPage() {
                       </span>
                     </span>
                     <span className="font-body-sm text-body-sm text-secondary line-clamp-1">
-                      Course, POR, Internship, Case Competition, APM Interview Prep
+                      DSA, Projects, SQL Analytics, System Design, Internships, Case Prep
                     </span>
                   </div>
                   <span className="w-7 h-7 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shadow-xs">

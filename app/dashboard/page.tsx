@@ -7,12 +7,12 @@ import AddMilestoneModal from '@/components/builder/AddMilestoneModal';
 import { useRoadmap } from '@/lib/context/RoadmapContext';
 
 const DASHBOARD_FILTERS = [
-  { id: 'all', label: 'All Goals' },
-  { id: 'por', label: 'POR' },
-  { id: 'fellowship', label: 'PM Fellowship' },
-  { id: 'ai', label: 'Agentic AI' },
-  { id: 'intern', label: 'Internships' },
-  { id: 'prep', label: 'Interview Prep' },
+  { id: 'all', label: 'All Tracks' },
+  { id: 'sde', label: 'SDE (Software)' },
+  { id: 'da', label: 'Data Analytics' },
+  { id: 'ai', label: 'Generative AI' },
+  { id: 'cloud', label: 'Cloud & DevOps' },
+  { id: 'pm', label: 'Product (APM)' },
 ];
 
 export default function DashboardPage() {
@@ -29,6 +29,18 @@ export default function DashboardPage() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalTrackId, setModalTrackId] = useState<string | undefined>(undefined);
   const [showBookingModal, setShowBookingModal] = useState(false);
+
+  // Filter career tracks by selected role
+  const filteredTracks = careerTracks.filter((track) => {
+    if (activeFilter === 'all') return true;
+    const key = activeFilter.toLowerCase();
+    if (key === 'sde') return track.targetRole.toLowerCase().includes('software') || track.targetRole.toLowerCase().includes('sde');
+    if (key === 'da') return track.targetRole.toLowerCase().includes('data') || track.targetRole.toLowerCase().includes('analyst');
+    if (key === 'ai') return track.targetRole.toLowerCase().includes('ai') || track.targetRole.toLowerCase().includes('machine');
+    if (key === 'cloud') return track.targetRole.toLowerCase().includes('cloud') || track.targetRole.toLowerCase().includes('devops');
+    if (key === 'pm') return track.targetRole.toLowerCase().includes('product') || track.targetRole.toLowerCase().includes('apm');
+    return true;
+  });
 
   // Compute aggregate stats across active tracks
   const totalMilestones = careerTracks.reduce((sum, t) => sum + t.milestones.length, 0);
@@ -206,18 +218,35 @@ export default function DashboardPage() {
                 <span className="w-2 h-2 rounded-full bg-primary-container animate-pulse" />
               </div>
               <span className="font-label-sm text-label-sm text-secondary font-medium">
-                {careerTracks.length} Active Tracks
+                {filteredTracks.length} {filteredTracks.length === 1 ? 'Track' : 'Tracks'} Displayed
               </span>
             </div>
 
             {/* Career Tracks List */}
-            {careerTracks.map((track) => (
-              <StoryCard
-                key={track.id}
-                track={track}
-                onAddMilestoneClick={() => openAddMilestoneForTrack(track.id)}
-              />
-            ))}
+            {filteredTracks.length > 0 ? (
+              filteredTracks.map((track) => (
+                <StoryCard
+                  key={track.id}
+                  track={track}
+                  onAddMilestoneClick={() => openAddMilestoneForTrack(track.id)}
+                />
+              ))
+            ) : (
+              <div className="py-8 px-4 text-center bg-surface-container-lowest rounded-xl border border-outline-variant/15 flex flex-col items-center">
+                <span className="material-symbols-outlined text-secondary text-[32px] mb-1">
+                  category
+                </span>
+                <p className="font-label-lg text-label-lg text-on-surface font-semibold">
+                  No {activeFilter.toUpperCase()} Tracks Active
+                </p>
+                <button
+                  onClick={() => setActiveFilter('all')}
+                  className="mt-3 px-3.5 py-1.5 rounded-lg bg-surface-container-high text-on-surface text-xs font-semibold"
+                >
+                  View All Tracks
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Peer Benchmark / Proof of Outcome Module */}

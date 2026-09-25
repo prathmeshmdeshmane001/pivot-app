@@ -26,9 +26,9 @@ const RoadmapContext = createContext<RoadmapContextType | undefined>(undefined);
 export function RoadmapProvider({ children }: { children: React.ReactNode }) {
   const [profile, setProfile] = useState<UserProfile>(initialProfile);
   const [careerTracks, setCareerTracks] = useState<CareerTrack[]>(initialCareerTracks);
-  const [activeTrackId, setActiveTrackId] = useState<string>('track-pm-2025');
+  const [activeTrackId, setActiveTrackId] = useState<string>('track-sde-2025');
   const [playbooks, setPlaybooks] = useState<SeniorPlaybook[]>(initialPlaybooks);
-  const [savedPlaybookIds, setSavedPlaybookIds] = useState<string[]>([]);
+  const [savedPlaybookIds, setSavedPlaybookIds] = useState<string[]>(['pb-sde-1', 'pb-da-1']);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   // Hydrate from localStorage if available

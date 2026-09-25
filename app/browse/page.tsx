@@ -6,26 +6,63 @@ import PlaybookCard from '@/components/cards/PlaybookCard';
 import { useRoadmap } from '@/lib/context/RoadmapContext';
 
 const FILTER_CHIPS = [
-  'All (42)',
+  'All',
+  'SDE',
+  'Data Analytics',
+  'AI / ML',
+  'Cloud / IT',
+  'Product (PM)',
   'IITs / BITS',
   'Tier-2/3 Achievers',
-  'Freshers / APM',
   'Off-Campus',
 ];
 
 export default function BrowsePage() {
   const { playbooks } = useRoadmap();
-  const [searchQuery, setSearchQuery] = useState('Product Management');
-  const [activeChip, setActiveChip] = useState('All (42)');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeChip, setActiveChip] = useState('All');
 
   const filteredPlaybooks = useMemo(() => {
     return playbooks.filter((pb) => {
       // Filter by category chip
-      if (activeChip !== 'All (42)') {
-        const matchesChip =
-          pb.tags.some((t) => t.toLowerCase().includes(activeChip.toLowerCase())) ||
-          pb.college.toLowerCase().includes(activeChip.toLowerCase()) ||
-          pb.badges.some((b) => b.toLowerCase().includes(activeChip.toLowerCase()));
+      if (activeChip !== 'All') {
+        const chip = activeChip.toLowerCase();
+        let matchesChip = false;
+
+        if (chip === 'sde') {
+          matchesChip =
+            pb.tags.some((t) => ['sde', 'swe', 'software'].some((k) => t.toLowerCase().includes(k))) ||
+            pb.seniorRole.toLowerCase().includes('sde') ||
+            pb.seniorRole.toLowerCase().includes('swe') ||
+            pb.title.toLowerCase().includes('sde');
+        } else if (chip === 'data analytics') {
+          matchesChip =
+            pb.tags.some((t) => ['data', 'analytics', 'da'].some((k) => t.toLowerCase().includes(k))) ||
+            pb.seniorRole.toLowerCase().includes('analyst') ||
+            pb.title.toLowerCase().includes('analyst');
+        } else if (chip === 'ai / ml') {
+          matchesChip =
+            pb.tags.some((t) => ['ai', 'ml', 'genai', 'agentic', 'pytorch'].some((k) => t.toLowerCase().includes(k))) ||
+            pb.seniorRole.toLowerCase().includes('ai') ||
+            pb.title.toLowerCase().includes('ai');
+        } else if (chip === 'cloud / it') {
+          matchesChip =
+            pb.tags.some((t) => ['cloud', 'devops', 'aws', 'docker', 'it'].some((k) => t.toLowerCase().includes(k))) ||
+            pb.seniorRole.toLowerCase().includes('cloud') ||
+            pb.seniorRole.toLowerCase().includes('devops') ||
+            pb.title.toLowerCase().includes('cloud');
+        } else if (chip === 'product (pm)') {
+          matchesChip =
+            pb.tags.some((t) => ['pm', 'product', 'apm'].some((k) => t.toLowerCase().includes(k))) ||
+            pb.seniorRole.toLowerCase().includes('pm') ||
+            pb.title.toLowerCase().includes('pm');
+        } else {
+          matchesChip =
+            pb.tags.some((t) => t.toLowerCase().includes(chip)) ||
+            pb.college.toLowerCase().includes(chip) ||
+            pb.badges.some((b) => b.toLowerCase().includes(chip));
+        }
+
         if (!matchesChip) return false;
       }
 
@@ -59,7 +96,7 @@ export default function BrowsePage() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search by profession, person, company or college..."
+                placeholder="Search SDE, Data Analyst, AI, PM, Cloud, company or college..."
                 className="w-full h-12 pl-10 pr-24 bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary outline-none"
               />
               {searchQuery && (
@@ -150,12 +187,12 @@ export default function BrowsePage() {
                 </h3>
                 <p className="font-body-sm text-body-sm text-secondary mt-1 max-w-xs">
                   We couldn&#39;t find any playbooks matching &#34;{searchQuery}&#34;. Try searching for
-                  Product Management, Flipkart, Blinkit, or DTU.
+                  SDE, Data Analyst, Google, AI, AWS, or Product.
                 </p>
                 <button
                   onClick={() => {
                     setSearchQuery('');
-                    setActiveChip('All (42)');
+                    setActiveChip('All');
                   }}
                   className="mt-4 px-4 py-2 rounded-xl bg-primary-container text-white font-label-md text-label-md font-semibold shadow-sm active:scale-95"
                 >

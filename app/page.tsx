@@ -58,7 +58,17 @@ export default function OnboardingPage() {
           <p className="font-headline-sm text-headline-sm text-primary-container mt-1 font-semibold max-w-xs">
             Discover, build &amp; validate your career roadmap
           </p>
-          <p className="font-body-md text-body-md text-on-surface-variant mt-2 max-w-sm px-2">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 mt-3 max-w-sm">
+            {['SDE', 'Data Analytics', 'AI / ML', 'Cloud / IT', 'Product (PM)'].map((role) => (
+              <span
+                key={role}
+                className="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px] font-semibold border border-outline-variant/15 shadow-xs"
+              >
+                {role}
+              </span>
+            ))}
+          </div>
+          <p className="font-body-md text-body-md text-on-surface-variant mt-2.5 max-w-sm px-2">
             Proven milestone playbooks engineered by verified seniors from tier-1 firms &amp;
             campuses. Zero guesswork, pure execution.
           </p>

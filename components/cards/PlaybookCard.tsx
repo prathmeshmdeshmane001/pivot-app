@@ -22,20 +22,20 @@ export default function PlaybookCard({ playbook }: PlaybookCardProps) {
           <div className="absolute -right-12 -top-12 w-44 h-44 rounded-full bg-primary/20 blur-3xl pointer-events-none" />
 
           {/* Senior Profile Header */}
-          <div className="flex items-start justify-between gap-space-sm relative z-10">
-            <div className="flex items-center gap-3">
+          <div className="flex items-start justify-between gap-2 relative z-10">
+            <div className="flex items-center gap-2.5 min-w-0 flex-1">
               <img
-                className="w-12 h-12 rounded-full object-cover shadow-sm bg-surface-container-high"
+                className="w-11 h-11 shrink-0 rounded-full object-cover shadow-sm bg-surface-container-high"
                 alt={playbook.seniorName}
                 src={playbook.avatarUrl}
               />
-              <div className="flex flex-col min-w-0">
+              <div className="flex flex-col min-w-0 flex-1">
                 <div className="flex items-center gap-1.5">
                   <span className="font-headline-sm text-headline-sm text-white truncate">
                     {playbook.seniorName}
                   </span>
                   <span
-                    className="material-symbols-outlined text-tertiary-fixed text-[16px]"
+                    className="material-symbols-outlined text-tertiary-fixed text-[16px] shrink-0"
                     style={{ fontVariationSettings: "'FILL' 1" }}
                   >
                     verified
@@ -46,7 +46,7 @@ export default function PlaybookCard({ playbook }: PlaybookCardProps) {
                 </span>
               </div>
             </div>
-            <div className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-white font-label-sm text-label-sm font-semibold border border-white/20 backdrop-blur-md shadow-xs">
+            <div className="shrink-0 whitespace-nowrap inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/10 text-white font-label-sm text-[11px] font-semibold border border-white/20 backdrop-blur-md shadow-xs">
               <span
                 className="material-symbols-outlined text-[13px] text-tertiary-fixed"
                 style={{ fontVariationSettings: "'FILL' 1" }}
@@ -150,20 +150,20 @@ export default function PlaybookCard({ playbook }: PlaybookCardProps) {
     <>
       <article className="relative flex flex-col p-space-md rounded-xl bg-surface-container-lowest text-on-surface shadow-sm overflow-hidden transition-all duration-200 hover:shadow-md border border-outline-variant/10">
         {/* Senior Profile Header */}
-        <div className="flex items-start justify-between gap-space-sm">
-          <div className="flex items-center gap-3">
+        <div className="flex items-start justify-between gap-2">
+          <div className="flex items-center gap-2.5 min-w-0 flex-1">
             <img
-              className="w-12 h-12 rounded-full object-cover shadow-sm bg-surface-container"
+              className="w-11 h-11 shrink-0 rounded-full object-cover shadow-sm bg-surface-container"
               alt={playbook.seniorName}
               src={playbook.avatarUrl}
             />
-            <div className="flex flex-col min-w-0">
+            <div className="flex flex-col min-w-0 flex-1">
               <div className="flex items-center gap-1.5">
                 <span className="font-headline-sm text-headline-sm text-on-surface truncate">
                   {playbook.seniorName}
                 </span>
                 <span
-                  className="material-symbols-outlined text-primary text-[16px]"
+                  className="material-symbols-outlined text-primary text-[16px] shrink-0"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
                   check_circle
@@ -174,7 +174,7 @@ export default function PlaybookCard({ playbook }: PlaybookCardProps) {
               </span>
             </div>
           </div>
-          <div className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed/70 text-on-secondary-fixed font-label-sm text-label-sm font-semibold border border-outline-variant/30 shadow-xs">
+          <div className="shrink-0 whitespace-nowrap inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed/70 text-on-secondary-fixed font-label-sm text-[11px] font-semibold border border-outline-variant/30 shadow-xs">
             <span
               className="material-symbols-outlined text-[13px] text-primary"
               style={{ fontVariationSettings: "'FILL' 1" }}

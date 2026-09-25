@@ -88,6 +88,16 @@ export default function IPhone17Frame({ children }: IPhone17FrameProps) {
             Browse
           </Link>
           <Link
+            href="/saved"
+            className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
+              pathname === '/saved'
+                ? 'bg-primary-container text-white shadow-sm'
+                : 'text-gray-400 hover:text-white'
+            }`}
+          >
+            Saved
+          </Link>
+          <Link
             href="/builder"
             className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
               pathname === '/builder'
